@@ -1,0 +1,7 @@
+decision,owner,required_evidence
+Feature approved,Credit Risk + Compliance,"Business rationale, no leakage, proxy review"
+Binning approved,Model Development,"Minimum bin size, WOE stability, monotonicity review"
+Model approved,Model Risk,"Validation metrics, calibration, tail review, challenger comparison"
+Cutoff approved,Credit Policy,"Risk appetite, expected loss impact, operational capacity"
+Monitoring approved,Portfolio Risk,"PSI/CSI triggers, calibration triggers, owner/frequency"
+Production use approved,Risk Committee,"Independent validation, data lineage, adverse-action review"

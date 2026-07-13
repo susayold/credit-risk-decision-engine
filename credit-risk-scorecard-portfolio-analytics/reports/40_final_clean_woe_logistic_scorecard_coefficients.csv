@@ -1,0 +1,13 @@
+feature,business_meaning,woe_column,coefficient,interpretation,model_intercept
+term_band_exp,Loan term/product tenor.,woe_logit_term_band_exp,-1.0283958334672092,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+fico_band_exp,External creditworthiness band.,woe_logit_fico_band_exp,-0.9729101193983559,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+dti_band_exp,Debt burden relative to income.,woe_logit_dti_band_exp,-0.6688033931492186,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+verification_status_exp,Income/identity verification status.,woe_logit_verification_status_exp,-0.572774856921269,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+loan_amount_band_exp,Exposure size and affordability proxy.,woe_logit_loan_amount_band_exp,-0.3314115581689903,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+home_ownership_exp,Housing stability proxy.,woe_logit_home_ownership_exp,-1.2130219217251264,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+income_band_exp,Repayment capacity proxy.,woe_logit_income_band_exp,-1.0806287024265664,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+purpose_exp,Loan purpose risk profile.,woe_logit_purpose_exp,-0.7368190878636671,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+open_acc_band_exp,Number of open credit accounts.,woe_logit_open_acc_band_exp,-0.8826537470969228,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+emp_length_exp,Employment stability proxy.,woe_logit_emp_length_exp,-1.1012412151489996,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+pub_rec_band_exp,Public record severity.,woe_logit_pub_rec_band_exp,-0.42954035360246523,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827
+revol_bal_band_exp,Revolving balance burden.,woe_logit_revol_bal_band_exp,-0.9690649942856022,Positive coefficient increases bad odds when WOE rises; negative coefficient lowers bad odds when WOE rises.,-1.651444076431827

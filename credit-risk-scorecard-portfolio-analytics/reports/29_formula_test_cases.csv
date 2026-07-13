@@ -1,0 +1,16 @@
+test_id,test_name,status,evidence
+T01,Account not matured is excluded from default rate,PASS,Monitor-only accounts do not contribute bad flags.
+T02,Leakage flag is controlled,PASS,Leakage flag total = 0.
+T03,Default Rate = Defaulted Matured Accounts / Matured Accounts,PASS,"reported=0.20162506, calculated=0.20162506"
+T04,WOE good distribution sums to 100% by variable,PASS,"{'dti_extreme_or_missing_bin': 1.0, 'fico_band': 1.0, 'high_amount_flag': 1.0, 'high_dti_flag': 1.0, 'home_ownership': 1.0, 'income_missing_or_invalid_bin': 1.0, 'purpose': 1.0}"
+T05,WOE bad distribution sums to 100% by variable,PASS,"{'dti_extreme_or_missing_bin': 1.0, 'fico_band': 1.0, 'high_amount_flag': 1.0, 'high_dti_flag': 1.0, 'home_ownership': 1.0, 'income_missing_or_invalid_bin': 1.0, 'purpose': 1.0}"
+T06,WOE smoothing avoids infinite WOE,PASS,All smoothed WOE values are finite.
+T07,IV variable equals sum of IV bins,PASS,IV bin sum reconciles to variable IV.
+T08,PD stays between 0 and 1,PASS,"min=0.0852, max=0.3317"
+T09,Higher score corresponds to lower risk grade,PASS,"{'A - Low': 555.1, 'B - Moderate': 515.72, 'C - Watch': 491.7, 'D - High': 473.24, 'E - Very High': 444.9}"
+T10,Portfolio EL equals sum of account-level EL,PASS,"account=1530037318.76, grade=1530037318.76"
+T11,Calibration Gap = Observed Default Rate - Average PD,PASS,Calibration table formula reconciles.
+T12,PSI is zero when actual distribution equals expected distribution,PASS,Identical distributions produce PSI 0.
+T13,Vintage bad rate uses matured-account denominator,PASS,Vintage formula reconciles.
+T14,Roll-rate denominator is defined by opening DPD bucket,PASS,All roll-rate formulas specify denominator at start.
+T15,IFRS 9 Stage 1 uses base/12-month ECL and Stage 2/3 use lifetime proxy,PASS,All three IFRS 9 bridge stages are present.

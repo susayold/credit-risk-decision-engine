@@ -1,0 +1,5 @@
+scenario,approved_bad_rate,assumed_reject_bad_rate,rejected_applications,inferred_reject_bad_count,interpretation
+1.0x approved/booked bad rate,0.20162506068426297,0.20162506068426297,27648741,5574679,Sensitivity only: reject outcomes are not observed.
+1.5x approved/booked bad rate,0.20162506068426297,0.30243759102639445,27648741,8362019,Sensitivity only: reject outcomes are not observed.
+2.0x approved/booked bad rate,0.20162506068426297,0.40325012136852595,27648741,11149358,Sensitivity only: reject outcomes are not observed.
+3.0x approved/booked bad rate,0.20162506068426297,0.6048751820527889,27648741,16724037,Sensitivity only: reject outcomes are not observed.

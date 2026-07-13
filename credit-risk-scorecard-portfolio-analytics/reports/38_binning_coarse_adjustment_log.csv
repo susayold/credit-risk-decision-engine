@@ -1,0 +1,14 @@
+feature,old_bin,old_count,minimum_count_rule,action,new_bin
+dti_band_exp,30-40,18363,1000,merge high/extreme DTI into 30+ to enforce minimum bin size,30+
+dti_band_exp,40-60,14,1000,merge high/extreme DTI into 30+ to enforce minimum bin size,30+
+dti_band_exp,60+,4,1000,merge high/extreme DTI into 30+ to enforce minimum bin size,30+
+application_type_exp,Individual,182877,1000,collapse low-IV sparse application type before final feature-governance review,All application types
+application_type_exp,Joint App,125,1000,collapse low-IV sparse application type before final feature-governance review,All application types
+revol_util_band_exp,100+,894,1000,merge high utilization tail,80+
+revol_util_band_exp,80-100,27526,1000,merge high utilization tail,80+
+total_acc_band_exp,75+,332,1000,merge sparse total-account tail,51+
+total_acc_band_exp,51-75,6554,1000,merge sparse total-account tail,51+
+purpose_exp,house,611,1000,merge rare loan-purpose category into other,other
+purpose_exp,renewable_energy,95,1000,merge rare loan-purpose category into other,other
+purpose_exp,wedding,7,1000,merge rare loan-purpose category into other,other
+purpose_exp,educational,1,1000,merge rare loan-purpose category into other,other

@@ -1,0 +1,18 @@
+feature,bin_count,monotonic_flag,action
+fico_band_exp,5,Monotonic,Accept for benchmark
+dti_band_exp,6,Non-monotonic,Review coarse-binning before production
+income_band_exp,6,Non-monotonic,Review coarse-binning before production
+loan_amount_band_exp,5,Non-monotonic,Review coarse-binning before production
+revol_util_band_exp,6,Non-monotonic,Review coarse-binning before production
+revol_bal_band_exp,6,Non-monotonic,Review coarse-binning before production
+open_acc_band_exp,6,Non-monotonic,Review coarse-binning before production
+total_acc_band_exp,6,Non-monotonic,Review coarse-binning before production
+mort_acc_band_exp,5,Monotonic,Accept for benchmark
+pub_rec_band_exp,4,Non-monotonic,Review coarse-binning before production
+bankruptcy_band_exp,3,Monotonic,Accept for benchmark
+term_band_exp,2,Monotonic,Accept for benchmark
+emp_length_exp,11,Not assessed - nominal,Accept categorical pattern
+purpose_exp,14,Not assessed - nominal,Accept categorical pattern
+home_ownership_exp,3,Not assessed - nominal,Accept categorical pattern
+verification_status_exp,3,Not assessed - nominal,Accept categorical pattern
+application_type_exp,2,Not assessed - nominal,Accept categorical pattern

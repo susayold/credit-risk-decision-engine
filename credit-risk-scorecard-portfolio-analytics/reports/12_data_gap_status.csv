@@ -1,0 +1,12 @@
+data_element,availability_status,project3_treatment,portfolio_claim,limitation_note
+Rejected applicant outcomes,Population available but outcomes unavailable,Use reject inference as sensitivity only,Framework/proxy,"LendingClub RejectStats provide rejected applicant volume and segments, but no default outcome after rejection."
+Consumer recovery cashflows,Unavailable in consumer-loan core,Use LGD proxy and document limitation,Framework/proxy,"Workout LGD cannot be estimated without recovery cashflows, timing and collection costs."
+Collection costs,Unavailable,Methodology only,Framework only,Needed for workout LGD and net recovery economics.
+Undrawn limit / credit line exposure,Unavailable and not applicable to current term-loan proxy,EAD equals loan amount proxy,Assumption,Behavioral CCF is only relevant for revolving products with undrawn limits.
+Monthly DPD transition history,Unavailable,Build roll-rate framework matrix only,Framework only,True roll-rate requires account-level month-by-month DPD status.
+Override decision records,Unavailable,Build override policy simulation only,Framework/proxy,True override rate and override bad rate require internal underwriter decision logs.
+Funding cost,Unavailable as portfolio-owned input,Use documented assumption in pricing table,Assumption,Production RAROC requires institution-specific funding cost.
+Operating cost,Unavailable as portfolio-owned input,Use documented assumption in pricing table,Assumption,"Production pricing requires acquisition, servicing and collection cost assumptions."
+Capital cost / economic capital,Unavailable as portfolio-owned input,Use documented assumption in RAROC proxy,Assumption,Production RAROC requires approved capital methodology.
+SICR / lifetime PD history,Unavailable,Use IFRS 9 bridge only,Framework/proxy,"Full IFRS 9 ECL requires origination PD, current lifetime PD and significant-increase-in-credit-risk history."
+Internal risk appetite thresholds,Unavailable,Use illustrative monitoring thresholds,Assumption,Production thresholds must be approved by Risk Governance and Credit Policy.

@@ -1,0 +1,4 @@
+sample,rows,observed_default_rate,avg_formula_pd,avg_logistic_pd,comment
+train_pre_2016,183002,0.16161572004677544,0.16161572004677544,0.1616817813830995,Model development window.
+validation_2016,85177,0.17844018925296734,0.14500475743345098,0.14677287627974553,Out-of-time validation; higher observed default creates under-prediction pressure.
+test_2017,46369,0.1570661433285169,0.1401490591443809,0.14269381419309954,Out-of-time test; mild under-prediction but ranking generalizes.

@@ -1,0 +1,10 @@
+{
+  "project": "Project 3 - Formula-First Credit Risk Modeling",
+  "account_rows": 1347681,
+  "matured_rows": 1291521,
+  "matured_default_rate": 0.20162506068426297,
+  "test_auc": 0.6264009591839652,
+  "test_ks": 0.1799968384320917,
+  "test_brier": 0.17277282236829625,
+  "reject_population_rows": 27648741
+}

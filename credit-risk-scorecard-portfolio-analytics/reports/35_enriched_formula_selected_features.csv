@@ -1,0 +1,16 @@
+feature,business_meaning,iv_variable,iv_weight
+term_band_exp,Loan term/product tenor.,0.5803512547079516,0.44621557451623234
+fico_band_exp,External creditworthiness band.,0.14826851472428276,0.11399944420497143
+dti_band_exp,Debt burden relative to income.,0.12524362768996494,0.0962962633936201
+verification_status_exp,Income/identity verification status.,0.11091190540874338,0.0852770097267343
+loan_amount_band_exp,Exposure size and affordability proxy.,0.09529350889845824,0.07326846883822312
+mort_acc_band_exp,Mortgage account experience.,0.04837821001770662,0.03719662980306836
+home_ownership_exp,Housing stability proxy.,0.04603530338571557,0.03539523552615261
+income_band_exp,Repayment capacity proxy.,0.0442645421633788,0.03403374758286611
+purpose_exp,Loan purpose risk profile.,0.03241535377612989,0.024923243623624997
+revol_util_band_exp,Revolving credit utilization.,0.02074534561419828,0.015950506243732697
+open_acc_band_exp,Number of open credit accounts.,0.016276331101996108,0.012514408084373709
+emp_length_exp,Employment stability proxy.,0.0089006654266555,0.006843468511032123
+pub_rec_band_exp,Public record severity.,0.008815608449842733,0.006778070620586928
+bankruptcy_band_exp,Bankruptcy history.,0.007910329605202021,0.006082027463133905
+revol_bal_band_exp,Revolving balance burden.,0.006796846357673074,0.005225901861647337

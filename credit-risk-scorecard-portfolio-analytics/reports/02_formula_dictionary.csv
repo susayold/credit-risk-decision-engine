@@ -1,0 +1,12 @@
+formula,definition,business_meaning
+Default Rate,Bad accounts / matured accounts,Observed default frequency on matured accounts only.
+WOE,LN(%Good_bin / %Bad_bin),Direction and strength of a bin's good/bad separation.
+IV,SUM((%Good_bin - %Bad_bin) * WOE_bin),Variable-level separation power.
+Good Odds,(1 - PD) / PD,Credit scorecard convention used for points.
+Scorecard Points,Offset + Factor * LN(Good Odds),Business-friendly score where higher means lower risk.
+Expected Loss,PD x LGD x EAD,"Expected credit loss proxy at account, band and portfolio level."
+AUC,Ranking metric,Probability that a bad account ranks riskier than a good account.
+Gini,2 x AUC - 1,Credit-risk ranking metric derived from AUC.
+KS,MAX(TPR - FPR),Maximum separation between cumulative bad and good distributions.
+Brier Score,AVG((PD - Default_Flag)^2),Probability accuracy metric; lower is better.
+PSI,SUM((Actual% - Expected%) x LN(Actual% / Expected%)),Population shift monitoring metric.

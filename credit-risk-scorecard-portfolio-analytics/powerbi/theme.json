@@ -1,0 +1,7 @@
+{
+  "name": "Financial Risk Analytics",
+  "dataColors": ["#1d5f8a", "#14746f", "#a63d40", "#b88732", "#697586", "#3b4a5a"],
+  "background": "#f7f9fb",
+  "foreground": "#14213d",
+  "tableAccent": "#1d5f8a"
+}

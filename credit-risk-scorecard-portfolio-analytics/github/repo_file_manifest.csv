@@ -1,0 +1,32 @@
+path,publish_to_github,purpose
+README.md,yes,GitHub front door
+DATA_ACCESS.md,yes,Data source and rebuild instructions
+ARTIFACT_INDEX.md,yes,Artifact map
+requirements.txt,yes,Python dependencies
+scripts/01_build_formula_first_engine.py,yes,Main formula engine
+scripts/02_validate_project3_outputs.py,yes,Validation audit
+scripts/03_build_completion_pack.py,yes,Completion pack engine
+scripts/04_build_financial_modeling_summary.py,yes,Finance-facing numbers and conclusions report
+docs/methodology_note.md,yes,Methodology
+docs/formula_dictionary.md,yes,Formula definitions
+docs/model_card.md,yes,Model governance
+docs/validation_checklist.md,yes,Validation evidence
+docs/governance_and_limitations.md,yes,Limitations and model risk controls
+docs/interview_story.md,yes,Interview narrative
+docs/plan_traceability_matrix.md,yes,Plan tracking
+docs/advanced_framework_extensions.md,yes,Advanced risk framework modules
+docs/credit_lifecycle_map.md,yes,Credit lifecycle map
+docs/risk_taxonomy_map.md,yes,Credit risk taxonomy map
+docs/final_recruiter_interview_pack.md,yes,Recruiter pitch and interview pack
+reports/*.csv,yes,Aggregated output reports
+reports/*.md,yes,Executive/audit summaries
+reports/*.json,yes,Machine-readable metrics/audit
+visuals/*.png,yes,Portfolio visuals
+excel/Credit_Risk_Formula_Engine.xlsx,yes,Excel master formula workbook
+powerbi/*,yes,Power BI build pack
+sql/SQL_Risk_KPI_Queries.sql,yes,SQL KPI examples
+github/*,yes,Publishing metadata
+website/web_case_study_copy.md,yes,Website copy
+data/processed/formula_engine_account_sample.csv.gz,optional,Small generated sample
+data/raw/*,no,Raw data excluded
+*.pbix,no,Power BI binary excluded unless intentionally published

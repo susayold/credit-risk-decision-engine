@@ -1,0 +1,13 @@
+feature,business_meaning,coefficient,expected_sign,actual_sign,status,action
+term_band_exp,Loan term/product tenor.,-1.0283958334672092,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+fico_band_exp,External creditworthiness band.,-0.9729101193983559,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+dti_band_exp,Debt burden relative to income.,-0.6688033931492186,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+verification_status_exp,Income/identity verification status.,-0.572774856921269,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+loan_amount_band_exp,Exposure size and affordability proxy.,-0.3314115581689903,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+home_ownership_exp,Housing stability proxy.,-1.2130219217251264,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+income_band_exp,Repayment capacity proxy.,-1.0806287024265664,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+purpose_exp,Loan purpose risk profile.,-0.7368190878636671,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+open_acc_band_exp,Number of open credit accounts.,-0.8826537470969228,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+emp_length_exp,Employment stability proxy.,-1.1012412151489996,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+pub_rec_band_exp,Public record severity.,-0.42954035360246523,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+revol_bal_band_exp,Revolving balance burden.,-0.9690649942856022,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.

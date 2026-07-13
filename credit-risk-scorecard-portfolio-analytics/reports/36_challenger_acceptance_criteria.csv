@@ -1,0 +1,6 @@
+criterion,acceptance_rule,status,comment
+Ranking improvement,Challenger should materially improve AUC/KS versus formula baseline.,Pass,Logistic challenger improves test AUC and KS versus expanded WOE formula.
+Calibration discipline,Higher AUC is not enough if calibration materially worsens.,Conditional Pass,"Average test calibration gap is manageable, but high-risk tail requires recalibration control before production use."
+Explainability,Model must support adverse-action and policy conversations.,Pass with control,Formula scorecard remains primary explanation layer; logistic is benchmark/challenger.
+Leakage control,Do not use lender decision outputs as predictors.,Pass,Sub-grade and interest rate are excluded because they can reflect lender pricing/risk decisions.
+Stability and monitoring,"Any accepted challenger must pass PSI, drift and out-of-time checks.",Pass for portfolio benchmark,"Out-of-time metrics, split drift, score distribution PSI and top-feature CSI are documented; production would still add ongoing monthly monitoring."

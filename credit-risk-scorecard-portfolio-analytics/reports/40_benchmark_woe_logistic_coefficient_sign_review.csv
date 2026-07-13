@@ -1,0 +1,16 @@
+feature,business_meaning,coefficient,expected_sign,actual_sign,status,action
+term_band_exp,Loan term/product tenor.,-1.0387981017777643,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+fico_band_exp,External creditworthiness band.,-1.0030337019814415,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+dti_band_exp,Debt burden relative to income.,-0.680452235999581,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+verification_status_exp,Income/identity verification status.,-0.5659470904342269,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+loan_amount_band_exp,Exposure size and affordability proxy.,-0.3494658407372251,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+mort_acc_band_exp,Mortgage account experience.,-0.7874080929734781,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+home_ownership_exp,Housing stability proxy.,-0.7787310338330933,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+income_band_exp,Repayment capacity proxy.,-0.9088147352461542,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+purpose_exp,Loan purpose risk profile.,-0.7697315362528044,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+revol_util_band_exp,Revolving credit utilization.,0.18378683248404146,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Positive,Review,Review sign reversal; test dropping variable or applying monotonic/coarse-binning before production.
+open_acc_band_exp,Number of open credit accounts.,-0.8040830905037318,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+emp_length_exp,Employment stability proxy.,-1.1028375831319333,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+pub_rec_band_exp,Public record severity.,-0.36572120313457296,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+bankruptcy_band_exp,Bankruptcy history.,-0.1296913815878989,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.
+revol_bal_band_exp,Revolving balance burden.,-0.7890147546737917,Negative under WOE = ln(%Good / %Bad) and target = bad_flag,Negative,Pass,Accept sign direction for benchmark; continue monitoring stability.

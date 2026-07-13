@@ -1,0 +1,4 @@
+dataset_layer,population,rows,matured_or_train_rows,features,used_for,not_used_for,headline_metric
+Portfolio base,Accepted/booked lending accounts,1347681,1291521,Thin/core fields,"Target, baseline PD, expected loss, cutoff, monitoring and stress/pricing framework.",Not used for enriched model benchmark.,Baseline AUC 0.626 on large portfolio foundation.
+Enriched accepted sample,Accepted loans with richer application-time variables,331865,183002,17 candidate features,Expanded WOE scorecard and logistic challenger benchmark.,Not directly comparable to the 1.3M-row baseline AUC as the same population/model.,Expanded WOE AUC 0.765; logistic challenger AUC 0.793.
+Rejected applicant data,Rejected applications,27648741,0,Application attributes only,Reject inference sensitivity and selection-bias discussion.,No observed default outcome; not used as labeled model training data.,"Sensitivity only, not true reject-inference implementation."

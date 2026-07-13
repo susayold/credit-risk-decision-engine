@@ -1,0 +1,7 @@
+from_bucket,to_bucket,formula,required_data,project3_status
+Current,1-30 DPD,Accounts moving Current to 1-30 / Accounts Current at start,Monthly account DPD history,Not observed in current consumer-loan core
+1-30 DPD,31-60 DPD,Accounts moving 1-30 to 31-60 / Accounts 1-30 at start,Monthly account DPD history,Not observed in current consumer-loan core
+31-60 DPD,61-90 DPD,Accounts moving 31-60 to 61-90 / Accounts 31-60 at start,Monthly account DPD history,Not observed in current consumer-loan core
+61-90 DPD,90+ DPD,Accounts moving 61-90 to 90+ / Accounts 61-90 at start,Monthly account DPD history,Not observed in current consumer-loan core
+90+ DPD,Write-off,Accounts written off / Accounts 90+ at start,Monthly account DPD and charge-off history,Framework only; use when servicing data is available
+Any delinquent,Current,Accounts cured / Delinquent accounts at start,Monthly account DPD history,Framework only; supports cure-rate monitoring

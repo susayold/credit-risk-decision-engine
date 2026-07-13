@@ -1,0 +1,17 @@
+project3_module,data_support_level,review_note
+Business context,Supported,Lending/default risk context is clear.
+Credit lifecycle,Supported as documentation,"Data covers application/booking/default outcome, not every servicing step."
+Population and target definition,Supported with limitation,Core good/bad target is available for booked loans; rejected applicant population is available for funnel/selection bias analysis but reject outcomes are unobserved.
+Risk taxonomy,Supported as documentation,"Focus on lending credit risk, not fraud/market/liquidity."
+Core formula engine,Supported,"Default rate, PD proxy, LGD/EAD proxy, EL can be calculated."
+Risk drivers and binning,Supported,"Income, DTI, loan amount, FICO, purpose, home ownership, state."
+WOE/IV and scorecard logic,Supported,Good/bad target and binned variables available.
+Decision engine,Supported as policy simulation,Approve/review/decline can be simulated from PD/score bands; rejected applicant summaries support approval funnel context.
+Validation and calibration,Supported,AUC/Gini/KS/Brier/calibration can be computed on matured samples.
+Portfolio monitoring,Partially supported,Monthly cohort/segment monitoring yes; true DPD roll-rate no.
+IFRS 9 ECL bridge,Proxy/assumption,EAD/LGD/stage are assumptions; label as bridge only because true DPD/SICR and lifetime PD history are unavailable.
+Stress testing,Proxy/assumption,"Macro data available, but scenario relationship must be illustrative."
+Risk-based pricing,Proxy/assumption,"Interest-rate fields are available in supplemental accepted/SBA data; funding cost, operating cost and economic capital remain assumptions."
+Collections/recovery,Framework/reference only,SBA provides charge-off reference; consumer-loan collection actions and recovery cashflows remain unavailable.
+Concentration risk,Supported,"State, purpose, FICO, DTI, income, funded amount/EAD proxy available."
+Governance,Supported as documentation,"Assumption register, limitation memo, monitoring triggers."

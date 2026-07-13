@@ -1,0 +1,8 @@
+override_type,policy_action,accounts,matured_accounts,bad_accounts,ead,expected_loss,avg_pd,observed_bad_rate,override_note
+No override candidate,Manual review,404304,391570,88217,5550822325,526945104.92144275,0.22520926564990093,0.22529049722910335,Simulation only: true override decisions are not present in the public data.
+No override candidate,Decline or require mitigants,269536,261015,78630,3551683325,466496044.2619922,0.30122685232731017,0.3012470547669674,Simulation only: true override decisions are not present in the public data.
+No override candidate,Approve with limit/pricing control,223275,215207,37757,2629599700,186433732.49199688,0.1835192486644398,0.17544503663914277,Simulation only: true override decisions are not present in the public data.
+No override candidate,Approve standard,212890,202645,26271,2623092400,128409314.39714931,0.13870352573895445,0.12964050433023266,Simulation only: true override decisions are not present in the public data.
+No override candidate,Auto approve,134769,124390,10602,2177929800,55637596.13435164,0.08523193182731731,0.08523193182731731,Simulation only: true override decisions are not present in the public data.
+Soft override candidate: reduce limit/pricing/manual review,Approve standard,56646,53142,9226,1671276250,82805097.37449543,0.1388427747548612,0.17361032704828572,Simulation only: true override decisions are not present in the public data.
+Soft override candidate: reduce limit/pricing/manual review,Approve with limit/pricing control,46261,43552,9700,1213294675,83310429.18117647,0.1828309483486872,0.22272226304188097,Simulation only: true override decisions are not present in the public data.

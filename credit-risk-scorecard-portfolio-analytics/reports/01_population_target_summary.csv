@@ -1,0 +1,10 @@
+metric,value
+account_rows,1347681.0
+matured_rows,1291521.0
+monitor_only_rows,56160.0
+matured_default_rate,0.20162506068426297
+total_ead_proxy,19417698475.0
+total_expected_loss_formula,1530037318.7626047
+average_pd_formula,0.20075803857818614
+average_lgd_assumption,0.3926558658911122
+average_scorecard_points,487.9475867006559

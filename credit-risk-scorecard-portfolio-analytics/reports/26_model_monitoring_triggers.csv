@@ -1,0 +1,10 @@
+metric,trigger_threshold,risk_signal,management_action
+PSI,<0.10 stable; 0.10-0.25 watchlist; >0.25 review,Score/population distribution shift,"Investigate CSI, segment mix and policy changes"
+CSI,>0.25 on key characteristic,Input variable drift,Identify feature causing PSI movement
+AUC/KS/Gini,Material drop for 3 matured monitoring periods,Ranking degradation after outcomes mature,Root cause analysis; recalibration or redevelopment if confirmed
+Calibration Gap,Observed default materially above predicted PD,Probability under-prediction,Recalibrate PD mapping or apply overlay
+Vintage Bad Rate,New cohorts worse than historical cohorts,Portfolio deterioration,"Tighten policy, review channel/product mix"
+Approved Bad Rate,Approved risk above risk appetite,Cutoff/policy weakness,Lower cutoff or increase manual review
+Override Rate,Illustrative 5-10% portfolio threshold,Policy exceptions may weaken score discipline,Review override authority and bad rate
+Data Quality,Missing/invalid key fields increase,Feature reliability issue,Route to manual review or data remediation
+Macro Stress,Severe scenario EL breaches appetite,Stress vulnerability,Activate contingency mode

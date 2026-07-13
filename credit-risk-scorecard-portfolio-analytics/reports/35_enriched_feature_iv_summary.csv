@@ -1,0 +1,18 @@
+feature,business_meaning,iv_variable,bins,accounts,selected_for_formula
+term_band_exp,Loan term/product tenor.,0.5803512547079516,2,183002,True
+fico_band_exp,External creditworthiness band.,0.14826851472428276,5,183002,True
+dti_band_exp,Debt burden relative to income.,0.12524362768996494,6,183002,True
+verification_status_exp,Income/identity verification status.,0.11091190540874338,3,183002,True
+loan_amount_band_exp,Exposure size and affordability proxy.,0.09529350889845824,5,183002,True
+mort_acc_band_exp,Mortgage account experience.,0.04837821001770662,5,183002,True
+home_ownership_exp,Housing stability proxy.,0.04603530338571557,3,183002,True
+income_band_exp,Repayment capacity proxy.,0.0442645421633788,6,183002,True
+purpose_exp,Loan purpose risk profile.,0.03241535377612989,14,183002,True
+revol_util_band_exp,Revolving credit utilization.,0.02074534561419828,6,183002,True
+open_acc_band_exp,Number of open credit accounts.,0.016276331101996108,6,183002,True
+emp_length_exp,Employment stability proxy.,0.0089006654266555,11,183002,True
+pub_rec_band_exp,Public record severity.,0.008815608449842733,4,183002,True
+bankruptcy_band_exp,Bankruptcy history.,0.007910329605202021,3,183002,True
+revol_bal_band_exp,Revolving balance burden.,0.006796846357673074,6,183002,True
+total_acc_band_exp,Depth of credit-file history.,0.0017382845948784114,6,183002,False
+application_type_exp,Individual or joint application.,5.694934161283697e-05,2,183002,False

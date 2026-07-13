@@ -1,0 +1,8 @@
+feature,risk_direction,example_reason_code,business_explanation,adverse_action_suitability
+fico_band_exp,Lower FICO means higher risk,Credit history risk,Credit history is weaker than lower-risk bands.,High
+dti_band_exp,Higher DTI means higher risk,High debt-to-income ratio,Debt obligations are high relative to income.,High
+revol_util_band_exp,Higher utilization usually means higher risk,High revolving credit usage,Not used in final clean scorecard because benchmark coefficient sign reversal must be remediated before adverse-action use.,Not suitable until sign reversal is resolved
+emp_length_exp,Shorter/unstable employment may increase risk,Limited employment stability,Employment history is less stable.,Medium
+loan_amount_band_exp,Higher amount may increase exposure/affordability risk,High requested exposure,Requested loan amount increases exposure.,Medium
+term_band_exp,Longer tenor may increase uncertainty,Long repayment tenor,Loan tenor increases repayment uncertainty.,Review
+verification_status_exp,Verification status may signal documentation risk,Limited verification evidence,Application verification level requires review.,Review

@@ -1,0 +1,7 @@
+dpd_bucket,risk_state,recommended_action,priority,main_metric,business_objective
+Current,No arrears,Monitor score/PSI and payment behavior,Low,N/A,Keep normal servicing
+1-30 DPD,Early delinquency,"SMS/email reminder, soft call, payment link",Medium,Cure Rate,Prevent roll-forward
+31-60 DPD,Mid delinquency,"Call campaign, hardship assessment, promise-to-pay tracking",High,Roll-back Rate,Cure before default
+61-90 DPD,Late delinquency,"Specialist collector, restructure eligibility, collateral review",Very High,Roll-forward to 90+,Reduce default conversion
+90+ DPD,Default treatment,"Default classification, workout queue, settlement decision",Critical,Recovery Rate,Maximize recovery and control LGD
+Write-off,Charged off,Recovery/legal/agency placement where appropriate,Critical,Net Loss Rate,Recover value after charge-off

@@ -1,0 +1,8 @@
+feature,potential_proxy_risk,business_justification,adverse_action_explainability,monitoring_action,keep_or_review
+home_ownership_exp,May proxy wealth/housing stability,"Can reflect repayment stability, but must be monitored",Review wording carefully,Monitor approval/default impact by segment,Review
+income_band_exp,May correlate with socioeconomic status,Repayment capacity is central to credit risk,Explain as affordability/capacity,Monitor disparate impact,Keep with monitoring
+purpose_exp,May correlate with social/economic profile,Loan purpose affects risk and use of funds,Use broad categories only,Avoid overly granular sparse categories,Review
+emp_length_exp,May proxy age/career stability,Employment stability can affect repayment capacity,Explain as employment history only,Monitor segment impact,Review
+fico_band_exp,"Creditworthiness signal, but requires fair-use controls",Core credit history indicator,Strong adverse-action explainability,Monitor policy and compliance use,Keep
+term_band_exp,Policy/product segmentation proxy,Tenor affects uncertainty and exposure duration,Explain as product tenor,Run without-term sensitivity,Keep with caveat
+verification_status_exp,May proxy channel/documentation quality,Verification affects data confidence,Use operational/documentation explanation,Monitor channel bias,Review

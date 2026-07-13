@@ -1,0 +1,7 @@
+metric,threshold,action
+Enriched score PSI,">0.10 watch, >0.25 material",Investigate population drift
+Top feature CSI,>0.10 watch,Segment review and data/process check
+Decile 10 calibration gap,>5 pp,Tail recalibration assessment
+AUC drop,>10% vs OOT baseline,Challenger review
+KS drop,>10% vs OOT baseline,Policy review
+Default rate shift,>2 pp vs development,Recalibration assessment

@@ -1,0 +1,11 @@
+feature,sample,csi_vs_train,interpretation
+term_band_exp,validation_2016,0.013179439516367283,Low
+term_band_exp,test_2017,0.0027167350879324487,Low
+fico_band_exp,validation_2016,0.0066973013810483276,Low
+fico_band_exp,test_2017,0.052923945483640385,Low
+dti_band_exp,validation_2016,0.04260983393369492,Low
+dti_band_exp,test_2017,0.08556367859031355,Low
+verification_status_exp,validation_2016,0.0003324974350194503,Low
+verification_status_exp,test_2017,0.02329043998159852,Low
+loan_amount_band_exp,validation_2016,0.05000967682295089,Low
+loan_amount_band_exp,test_2017,0.16226154481464825,Watch

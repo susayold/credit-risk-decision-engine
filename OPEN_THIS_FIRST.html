@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project 3 - Credit Risk Scorecard & Portfolio Analytics</title>
+    <meta name="description" content="Public-ready Project 3 portfolio package: credit risk scorecard, portfolio analytics, WOE/IV, PD/EL, enriched challenger benchmark, monitoring and governance.">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #13202f;
+        --muted: #5c6978;
+        --paper: #f5f7fa;
+        --white: #ffffff;
+        --line: #d9e2ec;
+        --blue: #174f73;
+        --teal: #0f766e;
+        --red: #a63d40;
+        --gold: #b88732;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+      a { color: inherit; }
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 14px 28px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(12px);
+      }
+      .brand { font-weight: 850; color: var(--blue); text-decoration: none; }
+      .nav { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.9rem; color: var(--muted); }
+      .nav a { text-decoration: none; }
+      main { max-width: 1160px; margin: 0 auto; padding: 42px 24px 72px; }
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: 36px;
+        align-items: center;
+        min-height: 560px;
+      }
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--teal);
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(2.4rem, 5vw, 5rem);
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+      h2 { margin: 0 0 12px; color: var(--ink); font-size: clamp(1.6rem, 3vw, 2.5rem); line-height: 1.05; }
+      h3 { margin: 0 0 8px; color: var(--ink); }
+      p { color: var(--muted); }
+      .hero-text { max-width: 720px; font-size: 1.08rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 15px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--blue);
+        font-weight: 800;
+        text-decoration: none;
+      }
+      .button.primary { background: var(--blue); border-color: var(--blue); color: var(--white); }
+      .hero-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        padding: 20px;
+        box-shadow: 0 18px 44px rgba(19, 32, 47, 0.08);
+      }
+      .hero-panel img { width: 100%; display: block; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); }
+      .section { margin-top: 52px; }
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .metric, .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        padding: 18px;
+      }
+      .metric span { display: block; color: var(--blue); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1; }
+      .metric p { min-height: 48px; margin: 10px 0 0; font-size: 0.94rem; }
+      .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+      .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--white); }
+      table { width: 100%; border-collapse: collapse; min-width: 760px; }
+      th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+      th { color: var(--blue); background: #eef5f8; font-size: 0.86rem; }
+      td { color: #273647; }
+      .note { border-left: 4px solid var(--teal); background: var(--white); padding: 18px; border-radius: 8px; }
+      .warning { border-left-color: var(--gold); }
+      .visual-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+      .visual-grid img { width: 100%; display: block; border: 1px solid var(--line); border-radius: 8px; background: var(--white); }
+      footer { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); }
+      @media (max-width: 900px) {
+        .topbar { position: static; display: block; }
+        .nav { margin-top: 10px; }
+        .hero, .grid-2, .grid-3, .visual-grid { grid-template-columns: 1fr; }
+        .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 560px) {
+        main { padding: 28px 16px 56px; }
+        .metric-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="credit-risk-scorecard-portfolio-analytics/index.html">Project 3</a>
+      <nav class="nav" aria-label="Page navigation">
+        <a href="#value">Value</a>
+        <a href="#models">Models</a>
+        <a href="#economics">Economics</a>
+        <a href="#governance">Governance</a>
+        <a href="#package">Package</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Public-ready credit risk portfolio case study</p>
+          <h1>Credit Risk Scorecard & Portfolio Analytics</h1>
+          <p class="hero-text">
+            A formula-first credit risk project that starts from risk theory, not random charts: matured good/bad target,
+            WOE/IV scorecard, PD bands, cutoff policy, expected loss, stress/pricing, monitoring, governance, and an
+            enriched scorecard benchmark against logistic regression.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="credit-risk-scorecard-portfolio-analytics/README.md">Open README</a>
+            <a class="button" href="credit-risk-scorecard-portfolio-analytics/reports/36_challenger_model_summary.md">Challenger Summary</a>
+            <a class="button" href="credit-risk-scorecard-portfolio-analytics/excel/Credit_Risk_Formula_Engine.xlsx">Excel Workbook</a>
+            <a class="button" href="credit-risk-scorecard-portfolio-analytics/DATA_ACCESS.md">Data Access</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <img src="credit-risk-scorecard-portfolio-analytics/visuals/challenger_auc_ks_comparison.png" alt="AUC and KS benchmark for expanded scorecard and logistic challenger">
+        </div>
+      </section>
+
+      <section id="value" class="section">
+        <p class="eyebrow">Employer value</p>
+        <h2>What this proves to a Risk Analytics hiring team</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Credit risk logic</h3>
+            <p>Defines observation window, matured target, good/bad population, leakage controls and honest data boundaries before modeling.</p>
+          </article>
+          <article class="card">
+            <h3>Decision economics</h3>
+            <p>Connects PD to score bands, cutoff actions, EAD, LGD, expected loss, pricing and severe stress impact.</p>
+          </article>
+          <article class="card">
+            <h3>Governance mindset</h3>
+            <p>Documents calibration, PSI, fairness/proxy review, model limitations, owner/frequency/actions and challenger acceptance criteria.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="models" class="section">
+        <p class="eyebrow">Modeling result</p>
+        <h2>Baseline is honest; enriched scorecard is materially stronger.</h2>
+        <div class="table-wrap" style="margin-top:18px">
+          <table>
+            <thead>
+              <tr>
+                <th>Dataset layer</th>
+                <th>Rows</th>
+                <th>Used for</th>
+                <th>Not used for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Portfolio base</td>
+                <td>1,347,681</td>
+                <td>Target, baseline PD, expected loss, cutoff, monitoring, stress/pricing framework</td>
+                <td>Enriched model benchmark</td>
+              </tr>
+              <tr>
+                <td>Enriched accepted sample</td>
+                <td>331,865</td>
+                <td>Expanded WOE scorecard and logistic challenger</td>
+                <td>Direct comparison to 1.3M AUC as the same model/population</td>
+              </tr>
+              <tr>
+                <td>Rejected applicant data</td>
+                <td>27,648,741</td>
+                <td>Reject inference sensitivity and selection-bias discussion</td>
+                <td>Labeled reject model training; outcomes are unobserved</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note warning" style="margin-top:18px">
+          <strong>Population bridge:</strong> AUC 0.626 and AUC 0.765 / 0.793 are not directly comparable as the same model on the same population.
+        </div>
+        <div class="metric-grid">
+          <div class="metric"><span>1.35M</span><p>Portfolio foundation rows for target, EL, cutoff and monitoring</p></div>
+          <div class="metric"><span>331.9K</span><p>Enriched accepted-loan rows for stronger modeling variables</p></div>
+          <div class="metric"><span>17</span><p>Candidate application-time features in enriched scorecard</p></div>
+          <div class="metric"><span>15</span><p>Features selected into expanded WOE formula scorecard</p></div>
+        </div>
+        <div class="table-wrap" style="margin-top:18px">
+          <table>
+            <thead>
+              <tr>
+                <th>Layer</th>
+                <th>Role</th>
+                <th>Test AUC</th>
+                <th>Test Gini</th>
+                <th>Test KS</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Thin baseline scorecard</td>
+                <td>1.3M-row portfolio baseline</td>
+                <td>0.626</td>
+                <td>0.253</td>
+                <td>0.180</td>
+                <td>Moderate ranking power; suitable for transparent segmentation, not production automated underwriting.</td>
+              </tr>
+              <tr>
+                <td>Expanded IV-weighted WOE formula</td>
+                <td>Primary explanation layer</td>
+                <td>0.765</td>
+                <td>0.530</td>
+                <td>0.400</td>
+                <td>Transparent heuristic score; not coefficient-estimated logistic scorecard.</td>
+              </tr>
+              <tr>
+                <td>Final clean WOE-logistic scorecard</td>
+                <td>Coefficient-estimated scorecard after sign/stability cleanup</td>
+                <td>0.781</td>
+                <td>0.562</td>
+                <td>0.418</td>
+                <td>WOE-transformed inputs with logistic coefficients converted to points; excludes sign/stability problem variables.</td>
+              </tr>
+              <tr>
+                <td>Raw logistic regression challenger</td>
+                <td>Performance benchmark</td>
+                <td>0.793</td>
+                <td>0.586</td>
+                <td>0.440</td>
+                <td>Better ranking, but kept as challenger because scorecard remains easier to explain and govern.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note warning" style="margin-top:18px">
+          <strong>Leakage control:</strong> `sub_grade` and `int_rate` are excluded from challenger features because they can encode lender pricing/risk decisions.
+        </div>
+        <div class="table-wrap" style="margin-top:18px">
+          <table>
+            <thead>
+              <tr>
+                <th>Term sensitivity model</th>
+                <th>Features</th>
+                <th>Test AUC</th>
+                <th>Test KS</th>
+                <th>Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Expanded WOE with term</td><td>15 selected WOE features</td><td>0.765</td><td>0.400</td><td>Current formula scorecard</td></tr>
+              <tr><td>Expanded WOE without term</td><td>14 selected WOE features</td><td>0.734</td><td>0.350</td><td>Product-tenor sensitivity</td></tr>
+              <tr><td>Logistic with term</td><td>17 candidate features</td><td>0.793</td><td>0.440</td><td>Current challenger</td></tr>
+              <tr><td>Logistic without term</td><td>16 candidate features</td><td>0.766</td><td>0.404</td><td>Product-tenor sensitivity</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note" style="margin-top:18px">
+          <strong>Term caveat:</strong> `term_band_exp` is retained because it is available at origination, but it is policy-sensitive due to high IV. Removing term lowers performance but does not collapse the model.
+        </div>
+        <div class="table-wrap" style="margin-top:18px">
+          <table>
+            <thead>
+              <tr>
+                <th>Calibration item</th>
+                <th>Validation</th>
+                <th>Test</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>High-risk decile 10 gap</td>
+                <td>+10.00 pp</td>
+                <td>+6.92 pp</td>
+                <td>Tail recalibration required before production use</td>
+              </tr>
+              <tr>
+                <td>Test decile 10 after candidate recalibration</td>
+                <td>Validation-factor method</td>
+                <td>-3.03 pp</td>
+                <td>Reduces absolute tail gap; still governance-only until independently validated</td>
+              </tr>
+              <tr>
+                <td>Coarse-binned formula scorecard</td>
+                <td>AUC 0.744 / KS 0.360</td>
+                <td>AUC 0.765 / KS 0.401</td>
+                <td>Sparse-bin cleanup does not weaken benchmark performance</td>
+              </tr>
+              <tr>
+                <td>Post-coarse WOE-logistic points</td>
+                <td>Minimum-count rule passed</td>
+                <td>No legacy sparse DTI or rare-purpose final point rows</td>
+                <td>Final points file is rebuilt after coarse-binning</td>
+              </tr>
+              <tr>
+                <td>Coefficient sign review</td>
+                <td>14 pass / 1 review</td>
+                <td>All final clean coefficients pass</td>
+                <td>`revol_util_band_exp`, `mort_acc_band_exp`, `bankruptcy_band_exp` excluded from final clean scorecard</td>
+                <td>Benchmark evidence retained separately; final clean points no longer use these variables</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="economics" class="section">
+        <p class="eyebrow">Financial modeling</p>
+        <h2>The project shows the money, not only model metrics.</h2>
+        <div class="metric-grid">
+          <div class="metric"><span>19.42B</span><p>Total EAD proxy</p></div>
+          <div class="metric"><span>1.53B</span><p>Baseline expected loss</p></div>
+          <div class="metric"><span>49.47%</span><p>Approval rate at 20% PD cutoff</p></div>
+          <div class="metric"><span>64.07%</span><p>Bad capture in review/decline group</p></div>
+          <div class="metric"><span>511.29M</span><p>Approved expected loss at 20% cutoff</p></div>
+          <div class="metric"><span>3.82B</span><p>Severe stressed expected loss</p></div>
+          <div class="metric"><span>28.13%</span><p>Highest required pricing rate</p></div>
+          <div class="metric"><span>23</span><p>Plan acceptance items tracked</p></div>
+        </div>
+        <div class="note warning" style="margin-top:18px">
+          <strong>Cutoff scope:</strong> 49.47% approval rate is a matured accepted/booked account backtest, not true approval impact across all applicants. Rejects have no observed repayment outcomes, so they are handled only through sensitivity analysis.
+        </div>
+      </section>
+
+      <section id="governance" class="section">
+        <p class="eyebrow">Governance</p>
+        <h2>Public data limitations are treated as model risk, not hidden.</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Known limitations</h3>
+            <p>Reject outcomes, monthly DPD roll-rate, workout LGD, override records, collection actions and internal capital/funding costs are not observed in public data.</p>
+          </article>
+          <article class="card">
+            <h3>Controls</h3>
+            <p>Uses sensitivity analysis, proxy assumptions, monitoring triggers, fairness/proxy review, model card language and challenger acceptance criteria.</p>
+          </article>
+        </div>
+        <div class="visual-grid">
+          <img src="credit-risk-scorecard-portfolio-analytics/visuals/expanded_scorecard_decile_pd.png" alt="Expanded scorecard PD by decile">
+          <img src="credit-risk-scorecard-portfolio-analytics/visuals/logistic_calibration_curve.png" alt="Logistic challenger calibration by decile">
+          <img src="credit-risk-scorecard-portfolio-analytics/visuals/recalibration_before_after.png" alt="Tail recalibration before and after">
+          <img src="credit-risk-scorecard-portfolio-analytics/visuals/enriched_score_distribution_shift.png" alt="Enriched score distribution shift versus train">
+          <img src="credit-risk-scorecard-portfolio-analytics/visuals/formula_vs_logistic_calibration_gap.png" alt="Formula versus logistic calibration gap">
+          <img src="credit-risk-scorecard-portfolio-analytics/visuals/psi_monitoring.png" alt="PSI monitoring by application year">
+        </div>
+      </section>
+
+      <section id="package" class="section">
+        <p class="eyebrow">Public package</p>
+        <h2>What to review first</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Main artifacts</h3>
+            <p><a href="credit-risk-scorecard-portfolio-analytics/README.md">README</a>, <a href="credit-risk-scorecard-portfolio-analytics/docs/model_card.md">Model Card</a>, <a href="credit-risk-scorecard-portfolio-analytics/reports/36_challenger_model_summary.md">Challenger Summary</a>, <a href="credit-risk-scorecard-portfolio-analytics/reports/38_formula_vs_woe_logistic_vs_raw_logistic_calibration.csv">Three-Model Calibration</a>, <a href="credit-risk-scorecard-portfolio-analytics/reports/39_tail_recalibration_plan.csv">Tail Recalibration Plan</a>, <a href="credit-risk-scorecard-portfolio-analytics/reports/40_recalibration_before_after_metrics.csv">Recalibration Metrics</a>, <a href="credit-risk-scorecard-portfolio-analytics/reports/40_final_clean_woe_logistic_coefficient_sign_review.csv">Final Sign Review</a>, <a href="credit-risk-scorecard-portfolio-analytics/reports/40_final_clean_scorecard_exclusion_log.csv">Clean Exclusion Log</a>, <a href="credit-risk-scorecard-portfolio-analytics/reports/40_final_model_recommendation.csv">Final Model Recommendation</a>, <a href="credit-risk-scorecard-portfolio-analytics/docs/risk_committee_memo.md">Risk Committee Memo</a>, and <a href="credit-risk-scorecard-portfolio-analytics/DATA_ACCESS.md">Data Access</a>.</p>
+          </article>
+          <article class="card">
+            <h3>GitHub-ready ZIP</h3>
+            <p><a href="credit-risk-scorecard-portfolio-analytics-v1.zip">credit-risk-scorecard-portfolio-analytics-v1.zip</a> contains the public package with portable forward-slash paths and without internal self-audit files.</p>
+          </article>
+        </div>
+      </section>
+      <footer>
+        <strong>Project 3 - Credit Risk Scorecard & Portfolio Analytics</strong>
+        <p>Final public deliverable built from the Project 3 source folder. Full raw data is excluded; sample data, aggregated reports and rebuild instructions are included.</p>
+      </footer>
+    </main>
+  </body>
+</html>

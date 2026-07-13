@@ -1,0 +1,5 @@
+item,available,treatment
+Rejected applicant population,Yes,Segmentation and sensitivity analysis
+Rejected default outcome,No,Cannot validate reject default behavior
+Inferred bad labels,No,"Optional future scenario, not production"
+Retrained scorecard with rejects,No,Future work only

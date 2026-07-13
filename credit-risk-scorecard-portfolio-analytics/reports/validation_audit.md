@@ -1,0 +1,80 @@
+# Validation Audit
+
+Status: **PASS**
+
+## Metrics
+- `account_rows`: 1347681
+- `matured_rows`: 1291521
+- `matured_default_rate`: 0.20162506068426297
+- `test_auc`: 0.6264009591839652
+- `test_ks`: 0.1799968384320917
+- `test_brier`: 0.17277282236829625
+- `reject_population_rows`: 27648741
+
+## Tables
+- `woe_iv_rows`: 7
+- `score_band_rows`: 5
+- `validation_rows`: 4
+- `cutoff_rows`: 9
+- `monitoring_rows`: 11
+- `reject_rows`: 4
+- `vintage_rows`: 139
+- `stress_rows`: 20
+- `pricing_rows`: 5
+- `concentration_rows`: 80
+- `override_rows`: 7
+- `acceptance_rows`: 23
+- `test_case_rows`: 15
+- `financial_modeling_kpi_rows`: 18
+- `sample_quick_review_grade_rows`: 5
+- `sample_quick_review_decile_rows`: 10
+- `enriched_feature_iv_rows`: 17
+- `enriched_selected_feature_rows`: 15
+- `challenger_comparison_rows`: 9
+- `challenger_acceptance_rows`: 5
+- `expanded_scorecard_decile_rows`: 10
+- `population_bridge_rows`: 3
+- `term_sensitivity_rows`: 4
+- `enriched_split_drift_rows`: 3
+- `logistic_calibration_rows`: 30
+- `enriched_feature_csi_rows`: 10
+- `score_distribution_shift_rows`: 30
+- `binning_quality_rows`: 17
+- `feature_selection_rationale_rows`: 17
+- `tail_calibration_rows`: 4
+- `coarse_binning_log_rows`: 13
+- `coarse_performance_rows`: 3
+- `three_model_calibration_rows`: 10
+- `feature_selection_governance_rows`: 17
+- `challenger_decision_rows`: 9
+- `reason_code_rows`: 7
+- `fairness_proxy_rows`: 7
+- `governance_signoff_rows`: 6
+- `woe_logistic_calibration_rows`: 30
+- `tail_recalibration_plan_rows`: 4
+- `recalibrated_pd_rows`: 20
+- `post_coarse_woe_stability_rows`: 84
+- `feature_governance_list_rows`: 17
+- `final_clean_coefficients_rows`: 12
+- `final_clean_points_rows`: 65
+- `final_clean_sign_review_rows`: 12
+- `benchmark_sign_review_rows`: 15
+- `clean_exclusion_rows`: 3
+- `recalibration_before_after_rows`: 2
+- `post_coarse_stack_rows`: 9
+- `mort_acc_sensitivity_rows`: 6
+- `final_recommendation_rows`: 5
+- `expanded_formula_test_auc`: 0.7648588259721735
+- `woe_logistic_test_auc`: 0.7808048449849906
+- `logistic_challenger_test_auc`: 0.7931530982749875
+
+## Completion Pack
+- `completion_status`: complete
+- `formula_tests_passed`: 15
+- `formula_tests_total`: 15
+- `acceptance_items`: 23
+- `excel_workbook_size_bytes`: 68140
+- `severe_stressed_el`: 3815530563.664245
+- `max_required_rate`: 0.2813450557312826
+
+Required files checked: 133

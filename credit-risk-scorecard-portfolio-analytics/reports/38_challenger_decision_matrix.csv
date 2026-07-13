@@ -1,0 +1,10 @@
+criterion,formula_scorecard,logistic_challenger,winner,comment
+AUC/Gini/KS,"AUC 0.765, KS 0.400","AUC 0.793, KS 0.440",Logistic challenger,Raw logistic has best discrimination.
+WOE-logistic classic scorecard,Heuristic IV-weighted score,WOE logistic AUC 0.781,WOE logistic scorecard,Classic scorecard bridges transparency and coefficient estimation.
+Brier,0.114,0.108,Logistic challenger,Lower Brier indicates better probability accuracy.
+High-risk tail gap,Tail review needed,Max decile 9-10 gap 10.00%,No production winner,Tail recalibration required before production use.
+PSI/CSI stability,Score/feature drift documented,Max top-feature CSI 0.162,Tie,"Stability is acceptable for benchmark, still requires production monitoring."
+Explainability,High,Medium,Formula scorecard,Scorecard is easier for policy and adverse-action explanation.
+Adverse-action usability,High,Medium,Formula scorecard,Reason codes map naturally to scorecard variables.
+Implementation complexity,Low/medium,Medium/high,Formula scorecard,Raw logistic needs stronger calibration and governance controls.
+Governance burden,Medium,High,Formula scorecard,Higher-performance challenger needs independent validation and calibration governance.

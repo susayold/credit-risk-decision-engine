@@ -1,0 +1,19 @@
+metric,raw_value,category,conclusion
+Portfolio accounts,1347681.0,Scale,1.35M accounts is large enough for portfolio-level risk segmentation.
+Matured accounts,1291521.0,Target quality,Matured-only outcomes prevent recent accounts from being incorrectly treated as good.
+Matured default rate,0.2016250606842629,Credit loss risk,Base portfolio risk is material at 20.16%; cutoff and pricing control are required.
+Total EAD proxy,19417698475.0,Exposure,"Total exposure proxy is the financial base for EL, stress and pricing."
+Formula expected loss,1530037318.7626047,Expected loss,Baseline EL is about 1.53B before final policy action.
+Formula EL rate,0.07879601801070839,Expected loss,"Portfolio EL rate is about 7.88%, so approval policy must avoid blindly maximizing volume."
+Test AUC,0.6264009591839652,Model ranking,"AUC is acceptable for a transparent formula-first baseline, but not strong enough for automated production approval alone."
+Test KS,0.1799968384320917,Model separation,KS confirms moderate separation between good and bad accounts.
+20% cutoff approval rate,0.4947159202211965,Policy,Approves about half the matured book while keeping higher-risk accounts in review/decline.
+20% cutoff approved default rate,0.146424681032216,Policy,Approved default rate drops below portfolio average.
+20% cutoff approved EAD,9778144450.0,Exposure approved,At this cutoff the engine approves about 9.78B EAD.
+20% cutoff approved EL,511289238.2581326,Loss approved,"Approved EL is about 511M, or 5.23% of approved EAD."
+Bad capture in review/decline,0.6407261053060065,Risk control,The review/decline group captures 64.07% of bad accounts.
+Severe stressed EL,3815530563.6642456,Stress testing,"Severe scenario EL rises to about 3.82B, showing material downside sensitivity."
+Severe stressed EL rate,0.1871405427754324,Stress testing,"Stress EL rate reaches 18.71%, requiring contingency policy."
+Lowest required rate,0.1255460925023165,Pricing,Low-risk grade still needs about 12.55% required rate under assumptions.
+Highest required rate,0.2813450557312826,Pricing,"Very-high-risk grade needs about 28.13%, supporting decline/mitigant action."
+Formula tests passed,15.0,Controls,Formula logic has test evidence instead of only visual storytelling.

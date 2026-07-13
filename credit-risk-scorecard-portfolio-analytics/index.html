@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Credit Risk Scorecard & Portfolio Analytics - Project Index</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #16202a;
+        --muted: #5b6775;
+        --line: #d9e0e7;
+        --paper: #f7f9fb;
+        --white: #ffffff;
+        --navy: #12355b;
+        --teal: #0f766e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+      main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 48px 24px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        color: var(--navy);
+        font-size: clamp(2.1rem, 6vw, 4rem);
+        line-height: 1;
+      }
+      p { color: var(--muted); }
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .metric {
+        min-height: 112px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+      .metric strong {
+        display: block;
+        color: var(--navy);
+        font-size: 1.75rem;
+        line-height: 1;
+      }
+      .metric span {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: .92rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+      a {
+        display: flex;
+        min-height: 112px;
+        align-items: center;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--navy);
+        font-weight: 800;
+        text-decoration: none;
+      }
+      a:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+      }
+      .note {
+        margin-top: 28px;
+        padding: 18px;
+        border-left: 4px solid var(--teal);
+        background: var(--white);
+      }
+      @media (max-width: 760px) {
+        .metrics,
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>Project Index</p>
+      <h1>Credit Risk Scorecard & Portfolio Analytics</h1>
+      <p>
+        Formula-first credit risk analytics portfolio project for target definition, WOE/IV, PD bands,
+        cutoff economics, validation, expected loss, final clean WOE-logistic scorecard, challenger benchmarking,
+        monitoring and governance. The public decision is deliberately conservative: transparent scorecard artifacts are
+        portfolio-ready, while production underwriting is not selected without internal-bank validation.
+      </p>
+      <div class="metrics">
+        <div class="metric"><strong>1.35M</strong><span>Accepted-loan base used for formula-first credit risk analytics.</span></div>
+        <div class="metric"><strong>0.781</strong><span>Final clean WOE-logistic test AUC after sign/stability cleanup.</span></div>
+        <div class="metric"><strong>0.418</strong><span>Final clean WOE-logistic test KS on the 2017 out-of-time sample.</span></div>
+        <div class="metric"><strong>100k</strong><span>Included sample supports reviewer quick-run without Project 0.</span></div>
+      </div>
+      <div class="grid">
+        <a href="README.md">README</a>
+        <a href="DATA_ACCESS.md">Data Access</a>
+        <a href="reports/executive_summary.md">Executive Summary</a>
+        <a href="docs/methodology_note.md">Methodology Note</a>
+        <a href="docs/model_card.md">Model Card</a>
+        <a href="reports/34_sample_quick_review.md">Sample Quick Review</a>
+        <a href="reports/36_challenger_model_summary.md">Challenger Benchmark</a>
+        <a href="reports/40_final_clean_woe_logistic_scorecard_points.csv">Final Clean Scorecard Points</a>
+        <a href="reports/39_final_scorecard_feature_governance_list.csv">Feature Governance List</a>
+        <a href="reports/40_final_clean_scorecard_exclusion_log.csv">Clean Exclusion Log</a>
+        <a href="reports/40_recalibration_before_after_metrics.csv">Recalibration Before/After</a>
+        <a href="reports/40_final_model_recommendation.csv">Final Model Recommendation</a>
+        <a href="excel/Credit_Risk_Formula_Engine.xlsx">Excel Workbook</a>
+        <a href="docs/governance_and_limitations.md">Governance & Limitations</a>
+        <a href="docs/final_recruiter_interview_pack.md">Interview Pack</a>
+      </div>
+      <div class="note">
+        Full raw data is excluded due to size. Reviewer quick-run works from the included 100k samples;
+        full rebuild requires the Project 0 data core documented in DATA_ACCESS.md.
+      </div>
+    </main>
+  </body>
+</html>

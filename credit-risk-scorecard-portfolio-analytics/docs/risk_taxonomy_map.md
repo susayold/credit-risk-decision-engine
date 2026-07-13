@@ -1,0 +1,17 @@
+# Credit Risk Taxonomy Map
+
+This map keeps the project focused on lending credit risk, not fraud, market or liquidity risk.
+
+| risk_type | meaning | metric | formula | decision |
+| --- | --- | --- | --- | --- |
+| Default Risk | Borrower fails to repay within performance window | PD / Default Rate | PD = Bad / Matured | Approve/review/decline policy |
+| Delinquency Risk | Borrower becomes past due before default | 30/60/90 DPD Rate | DPD bucket accounts / active accounts | Early warning and collection prioritization |
+| Exposure Risk | Loss severity rises because exposure is large | EAD | Outstanding or loan amount proxy | Limit control |
+| Recovery Risk | Low recoveries after default | LGD / Recovery Rate | LGD = 1 - Recovery Rate | Collateral, workout and collection strategy |
+| Concentration Risk | Portfolio is too concentrated in one segment | EAD Share / EL Share | Segment EAD / Total EAD | Portfolio limits |
+| Model Risk | Scorecard may be unstable or miscalibrated | AUC, KS, Brier, Calibration Gap, PSI | Validation and monitoring metrics | Recalibration or redevelopment review |
+| Policy Risk | Decision rules approve too much bad risk | Approved Bad Rate / Bad Capture | Bad accounts in decision group / accounts | Cutoff and override policy |
+| Provisioning Risk | Expected loss is understated | ECL | PD x LGD x EAD | IFRS 9 bridge and provision review |
+| Stress Risk | Loss rises under adverse macro conditions | Stressed EL / Unexpected Loss Buffer | Stressed PD x Stressed LGD x EAD | Risk appetite and contingency mode |
+| Pricing Risk | Rate does not compensate for credit risk | Required Rate / RAROC | Funding + OpEx + EL + Capital + Margin | Risk-based pricing |
+| Collections Risk | Late-stage actions fail to cure or recover accounts | Cure / Recovery / Write-off Rate | Collected or cured / delinquent exposure | Collections strategy |

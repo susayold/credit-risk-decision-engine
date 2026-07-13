@@ -1,0 +1,12 @@
+{
+  "mode": "light_sample_review",
+  "sample_path": "data/processed/formula_engine_account_sample.csv.gz",
+  "sample_rows": 100000,
+  "matured_rows": 95873,
+  "observed_default_rate": 0.19121,
+  "average_formula_pd": 0.20049604170547602,
+  "ead_proxy": 1441666950.0,
+  "expected_loss": 113513807.99123499,
+  "sample_purpose": "Quick reviewer sanity check from included 100k sample; not a full raw-data rebuild.",
+  "full_rebuild_note": "Full regeneration requires Project 0 data core as documented in DATA_ACCESS.md."
+}

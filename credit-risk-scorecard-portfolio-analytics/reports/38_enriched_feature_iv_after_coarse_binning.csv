@@ -1,0 +1,18 @@
+feature,business_meaning,iv_variable,bins,min_bin_accounts,selected_for_formula,minimum_count_rule,minimum_count_rule_status
+term_band_exp,Loan term/product tenor.,0.5803512547079516,2,44299,True,1000,Pass
+fico_band_exp,External creditworthiness band.,0.14826851472428276,5,1697,True,1000,Pass
+dti_band_exp,Debt burden relative to income.,0.12517540843302197,4,18381,True,1000,Pass
+verification_status_exp,Income/identity verification status.,0.11091190540874338,3,52475,True,1000,Pass
+loan_amount_band_exp,Exposure size and affordability proxy.,0.09529350889845824,5,21620,True,1000,Pass
+mort_acc_band_exp,Mortgage account experience.,0.04837821001770662,5,5500,True,1000,Pass
+home_ownership_exp,Housing stability proxy.,0.04603530338571557,3,19340,True,1000,Pass
+income_band_exp,Repayment capacity proxy.,0.0442645421633788,6,9903,True,1000,Pass
+purpose_exp,Loan purpose risk profile.,0.03195748639878692,10,1058,True,1000,Pass
+revol_util_band_exp,Revolving credit utilization.,0.020149577323001377,5,16576,True,1000,Pass
+open_acc_band_exp,Number of open credit accounts.,0.016276331101996108,6,2330,True,1000,Pass
+emp_length_exp,Employment stability proxy.,0.0089006654266555,11,7282,True,1000,Pass
+pub_rec_band_exp,Public record severity.,0.008815608449842733,4,2086,True,1000,Pass
+bankruptcy_band_exp,Bankruptcy history.,0.007910329605202021,3,1551,True,1000,Pass
+revol_bal_band_exp,Revolving balance burden.,0.006796846357673074,6,4514,True,1000,Pass
+total_acc_band_exp,Depth of credit-file history.,0.0012373657240161142,5,6886,False,1000,Pass
+application_type_exp,Individual or joint application.,0.0,1,183002,False,1000,Pass

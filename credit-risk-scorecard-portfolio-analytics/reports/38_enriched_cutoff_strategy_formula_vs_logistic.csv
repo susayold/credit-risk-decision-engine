@@ -1,0 +1,9 @@
+pd_cutoff,formula_approval_rate,formula_approved_bad_rate,woe_logistic_approval_rate,woe_logistic_approved_bad_rate,logistic_approval_rate,logistic_approved_bad_rate,comment
+0.05,0.1750091656063318,0.027972889710412816,0.25055532791304536,0.03554828714064383,0.2587935905454075,0.03,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
+0.1,0.47816429079773126,0.05511455890312105,0.5303543315577217,0.05818965517241379,0.531756130173176,0.054345621932919655,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
+0.15,0.6529577950786085,0.07599828252468871,0.6967586102784188,0.07843258635632042,0.6869028877051478,0.07315311921132775,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
+0.2,0.8442925230218465,0.1086106924825666,0.7908085143091289,0.09255774632523385,0.7763807716362224,0.08727777777777777,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
+0.25,0.8442925230218465,0.1086106924825666,0.8448748086005736,0.10307331018991218,0.8327977743751213,0.09811995027967682,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
+0.3,0.9330371584463758,0.12717270710059173,0.881839159783476,0.11144534115920764,0.8731048761025685,0.10720019760405089,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
+0.35,0.9330371584463758,0.12717270710059173,0.9106083805991072,0.11924497915877226,0.9038366149798357,0.11507993319016942,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
+0.5,0.9330371584463758,0.12717270710059173,0.9675645366516422,0.13944054385378357,0.9616338502016434,0.13559093967257232,"Accepted/booked test sample cutoff benchmark, not full applicant-level approval simulation."
