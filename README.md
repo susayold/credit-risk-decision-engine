@@ -1,6 +1,12 @@
 # Credit Risk Decision Engine
 
-## [OPEN LIVE PROJECT](https://susayold.github.io/credit-risk-decision-engine/)
+<p align="left">
+  <a href="https://susayold.github.io/credit-risk-decision-engine/">
+    <img src="https://img.shields.io/badge/VIEW_LIVE_PROJECT-0D6B67?style=for-the-badge&amp;logo=githubpages&amp;logoColor=white" height="40" alt="View live Credit Risk Decision Engine project">
+  </a>
+</p>
+
+**Live website:** [English / Tiếng Việt](https://susayold.github.io/credit-risk-decision-engine/)
 
 Interactive website with English and Vietnamese views. The live project is the recommended starting point.
 
