@@ -1,7 +1,7 @@
 window.PORTFOLIO_PROJECTS = {
   "3": {
     number: "03",
-    status: "Closed - recruiter ready",
+    status: "Completed | Model evidence validated",
     statusClass: "complete",
     accent: "#0d6b67",
     category: "Credit Risk Modeling",
@@ -81,12 +81,12 @@ window.PORTFOLIO_PROJECTS = {
     alerts: [
       { tone: "amber", text: "Thin baseline AUC 0.626 is moderate ranking power, not a strong production underwriting model." },
       { tone: "red", text: "High-risk tail underprediction must be recalibrated and independently validated before pricing, ECL or automated cutoff use." },
-      { tone: "info", text: "The clean WOE-logistic scorecard is a conditional portfolio demonstration candidate; the final production model is explicitly not selected." },
+      { tone: "info", text: "The clean WOE-logistic scorecard is a conditional analytical candidate; the final production model is explicitly not selected." },
       { tone: "info", text: "Rejected applications support sensitivity analysis only because their repayment outcomes are not observed." }
     ],
     decision: {
       finding: "The clean WOE-logistic scorecard materially improves ranking over the thin formula baseline while retaining scorecard explainability. The raw logistic challenger performs best, but its extra performance does not remove calibration, stability and governance requirements.",
-      recommendation: "Use the clean scorecard for portfolio demonstration and controlled policy analysis. Do not deploy automated underwriting without internal data, approved recalibration, fairness/proxy review and independent validation."
+      recommendation: "Use the clean scorecard for controlled portfolio and policy analysis. Do not deploy automated underwriting without internal data, approved recalibration, fairness/proxy review and independent validation."
     },
     charts: [
       { src: "assets/images/p3-challenger-comparison.png", alt: "AUC and KS comparison across credit risk model layers", caption: "Model stack: ranking improves as richer application-time evidence is added." },
@@ -104,7 +104,7 @@ window.PORTFOLIO_PROJECTS = {
       ]
     },
     limitations: [
-      "This is a formula-first educational credit-risk project, not a production automated underwriting model.",
+      "This is an independent formula-first credit-risk implementation using public data, not a production automated underwriting model.",
       "Baseline and enriched results use different populations and must not be read as a single controlled model uplift.",
       "Formula PD in the thin layer is mapped from observed decile bad rates; out-of-time validation is the meaningful calibration check.",
       "Reject outcomes, consumer workout recoveries, observed overrides and monthly delinquency transitions are unavailable.",
@@ -116,13 +116,12 @@ window.PORTFOLIO_PROJECTS = {
       { title: "Governance discipline", text: "I can document exclusions, challengers, tail risk, limitations and production gates without overclaiming." }
     ],
     artifacts: [
-      { label: "Open complete FINAL package", type: "HTML", href: "OPEN_THIS_FIRST.html", detail: "Original reports, scripts, data, models and validation evidence" },
-      { label: "Project 3 README", type: "MD", href: "evidence/project-3/README.md", detail: "Full methodology, results and positioning" },
+      { label: "Credit Risk Decision Engine README", type: "MD", href: "evidence/project-3/README.md", detail: "Full methodology, results and positioning" },
       { label: "Model card", type: "MD", href: "evidence/project-3/model_card.md", detail: "Population, performance and governance" },
       { label: "Validation metrics", type: "CSV", href: "evidence/project-3/validation_metrics.csv", detail: "Baseline performance evidence" },
       { label: "Cutoff strategy", type: "CSV", href: "evidence/project-3/cutoff_strategy.csv", detail: "Approval and loss trade-offs" },
       { label: "Final model recommendation", type: "CSV", href: "evidence/project-3/final_model_recommendation.csv", detail: "Keep, candidate and benchmark decisions" }
     ],
-    next: { href: "#artifacts", label: "Evidence pack", title: "Supporting artifacts" }
+    next: { href: "#artifacts", label: "Evidence pack", title: "Supporting evidence" }
   }
 };
