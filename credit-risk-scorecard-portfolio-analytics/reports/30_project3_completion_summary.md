@@ -11,7 +11,7 @@ This is a formula-first credit risk project for lending risk. It is not position
 - Total accounts: 1,347,681
 - Matured accounts: 1,291,521
 - Matured default rate: 20.16%
-- Total EAD proxy: 19,417,698,475
+- Total EAD-proxy units: 19,417,698,475
 - Formula expected loss: 1,530,037,319
 
 ## Senior Risk Modules Added

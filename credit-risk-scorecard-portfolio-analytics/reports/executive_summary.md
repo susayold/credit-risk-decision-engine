@@ -10,7 +10,7 @@ Which accepted/booked lending accounts are likely to default, how should they be
 - Matured rows: 1,291,521
 - Monitor-only rows: 56,160
 - Matured default rate: 20.16%
-- Total EAD proxy: 19,417,698,475
+- Total EAD-proxy units: 19,417,698,475
 - Formula expected loss: 1,530,037,319
 
 ## Formula Engine Result

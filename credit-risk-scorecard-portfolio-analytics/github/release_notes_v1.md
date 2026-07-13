@@ -60,7 +60,7 @@ Project 3 now has a reproducible formula-first credit risk scorecard and portfol
 | Formula tests passed | 15 / 15 |
 | Severe stressed EL | 3,815,530,564 |
 | Severe stressed EL rate | 18.71% |
-| Portfolio EAD proxy | 19.42B |
+| Portfolio EAD-proxy units | 19.42B |
 | Baseline expected loss | 1.53B |
 | 20% cutoff approved EAD | 9.78B |
 | 20% cutoff approved EL | 511.29M |

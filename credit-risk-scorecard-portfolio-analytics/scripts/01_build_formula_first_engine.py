@@ -404,7 +404,7 @@ Which accepted/booked lending accounts are likely to default, how should they be
 - Matured rows: {int(metrics['matured_rows']):,}
 - Monitor-only rows: {int(metrics['monitor_only_rows']):,}
 - Matured default rate: {float(metrics['matured_default_rate']):.2%}
-- Total EAD proxy: {float(metrics['total_ead_proxy']):,.0f}
+- Total EAD-proxy units: {float(metrics['total_ead_proxy']):,.0f}
 - Formula expected loss: {float(metrics['total_expected_loss_formula']):,.0f}
 
 ## Formula Engine Result

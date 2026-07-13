@@ -24,13 +24,13 @@ End-to-end credit risk management project: formula-first PD scorecard, enriched 
 | Reject population | 27.6M |
 | Formula tests | 15 / 15 pass |
 | Severe stressed EL | 3.82B |
-| Portfolio EAD proxy | 19.42B |
+| Portfolio EAD-proxy units | 19.42B |
 | Baseline expected loss | 1.53B |
 | 20% cutoff approved EL | 511.29M |
 
 ## Scope Consistency
 
-- EAD consistency note: 19.42B is full portfolio EAD proxy; cutoff economics uses matured eligible EAD where 100% approval equals 18.58B.
+- EAD consistency note: 19.42B is the full portfolio EAD-proxy unit base; cutoff economics uses matured eligible EAD where 100% approval equals 18.58B.
 - EL consistency note: 1.53B baseline expected loss uses full portfolio scope; cutoff economics uses matured eligible expected loss where 100% approval equals 1.47B.
 - Population bridge: AUC 0.626 is the thin baseline on the 1.3M portfolio base; AUC 0.765 / 0.793 are enriched modeling benchmarks on the 331.9K accepted-loan sample. They are not the same model on the same population.
 - Cutoff scope: 49.47% approval rate is a matured accepted/booked account backtest, not true applicant-level approval impact across all applications.

@@ -9,7 +9,7 @@ This report turns the Project 3 formula-first risk engine into a finance-facing 
 | Portfolio accounts | 1,347,681 | Scale | 1.35M accounts is large enough for portfolio-level risk segmentation. |
 | Matured accounts | 1,291,521 | Target quality | Matured-only outcomes prevent recent accounts from being incorrectly treated as good. |
 | Matured default rate | 20.16% | Credit loss risk | Base portfolio risk is material at 20.16%; cutoff and pricing control are required. |
-| Total EAD proxy | 19.42B | Exposure | Total exposure proxy is the financial base for EL, stress and pricing. |
+| Total EAD-proxy units | 19.42B | Exposure | Total exposure proxy is the financial base for EL, stress and pricing. |
 | Formula expected loss | 1.53B | Expected loss | Baseline EL is about 1.53B before final policy action. |
 | Formula EL rate | 7.88% | Expected loss | Portfolio EL rate is about 7.88%, so approval policy must avoid blindly maximizing volume. |
 | Test AUC | 62.64% | Model ranking | AUC is acceptable for a transparent formula-first baseline, but not strong enough for automated production approval alone. |

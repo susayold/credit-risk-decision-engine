@@ -247,7 +247,7 @@ Completion pack:
 
 EAD consistency note:
 
-- Total EAD proxy of **19.42B** represents full portfolio EAD.
+- Total EAD-proxy units of **19.42B** represent the analytical exposure base, not a stated currency amount.
 - Cutoff economics uses matured eligible EAD only, where 100% approval equals **18.58B**.
 
 EL consistency note:

@@ -667,7 +667,7 @@ This is a formula-first credit risk project for lending risk. It is not position
 - Total accounts: {len(scored):,}
 - Matured accounts: {len(mature):,}
 - Matured default rate: {mature['bad_flag'].mean():.2%}
-- Total EAD proxy: {scored['ead_proxy'].sum():,.0f}
+- Total EAD-proxy units: {scored['ead_proxy'].sum():,.0f}
 - Formula expected loss: {scored['expected_loss_formula'].sum():,.0f}
 
 ## Senior Risk Modules Added

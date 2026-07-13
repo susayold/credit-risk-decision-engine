@@ -76,7 +76,7 @@ def build_kpi_summary(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:
         ("Portfolio accounts", pop["account_rows"], "Scale", "1.35M accounts is large enough for portfolio-level risk segmentation."),
         ("Matured accounts", pop["matured_rows"], "Target quality", "Matured-only outcomes prevent recent accounts from being incorrectly treated as good."),
         ("Matured default rate", pop["matured_default_rate"], "Credit loss risk", "Base portfolio risk is material at 20.16%; cutoff and pricing control are required."),
-        ("Total EAD proxy", pop["total_ead_proxy"], "Exposure", "Total exposure proxy is the financial base for EL, stress and pricing."),
+        ("Total EAD-proxy units", pop["total_ead_proxy"], "Exposure", "Total exposure proxy is the financial base for EL, stress and pricing."),
         ("Formula expected loss", pop["total_expected_loss_formula"], "Expected loss", "Baseline EL is about 1.53B before final policy action."),
         ("Formula EL rate", pop["total_expected_loss_formula"] / pop["total_ead_proxy"], "Expected loss", "Portfolio EL rate is about 7.88%, so approval policy must avoid blindly maximizing volume."),
         ("Test AUC", test["auc"], "Model ranking", "AUC is acceptable for a transparent formula-first baseline, but not strong enough for automated production approval alone."),
