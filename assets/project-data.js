@@ -13,12 +13,12 @@ window.PORTFOLIO_PROJECTS = {
       { value: "0.781", label: "Clean WOE-logistic test AUC" },
       { value: "0.418", label: "Clean scorecard test KS" },
       { value: "0.793", label: "Raw logistic challenger AUC" },
-      { value: "100K", label: "Portable reviewer sample" }
+      { value: "100K", label: "Included validation sample" }
     ],
     business: {
       question: "Which lending accounts are most likely to default, why are they risky, what cutoff balances approval and expected loss, and what evidence is required before production use?",
       context: "A credit score is useful only when its population, target, ranking, calibration, policy trade-offs and limitations are transparent to Risk, Business and Model Governance.",
-      output: "A layered scorecard stack, cutoff simulator, expected-loss view, model card, validation evidence, governance logs and a lightweight reviewer mode."
+      output: "A layered scorecard stack, cutoff simulator, expected-loss view, model card, validation evidence, governance logs and a lightweight sample-based run mode."
     },
     dataLayers: [
       { meta: "Portfolio foundation", title: "1.35M accepted/booked accounts", text: "Thin/core features support maturity, target, baseline PD, EL, cutoff, monitoring and concentration." },
@@ -95,12 +95,12 @@ window.PORTFOLIO_PROJECTS = {
       { src: "assets/images/p3-vintage.png", alt: "Observed default rate by vintage", caption: "Vintage evidence: portfolio performance is monitored across origination cohorts." }
     ],
     validation: {
-      headline: "Public package and portable reviewer path passed the final project controls.",
+      headline: "The public package and sample-based validation path passed all final controls.",
       cards: [
         { title: "Performance", text: "Time-aware train, 2016 validation and 2017 test windows preserve out-of-time evidence." },
         { title: "Leakage", text: "Pricing-derived sub-grade and interest rate are excluded from model features." },
         { title: "Stability", text: "Sparse-bin cleanup, sign review, CSI/PSI, term sensitivity and tail diagnostics are documented." },
-        { title: "Portability", text: "100k samples support reviewer inspection; required-file and ZIP path checks passed." }
+        { title: "Portability", text: "The included 100k samples support independent inspection; required-file and ZIP path checks passed." }
       ]
     },
     limitations: [
@@ -111,9 +111,9 @@ window.PORTFOLIO_PROJECTS = {
       "Independent validation, approved calibration, adverse-action review and production governance have not been performed."
     ],
     employerValues: [
-      { title: "Model judgment", text: "I can distinguish target design, score construction, ranking, calibration and policy use." },
-      { title: "Business trade-offs", text: "I can translate a PD distribution into approval, bad capture and expected-loss choices." },
-      { title: "Governance discipline", text: "I can document exclusions, challengers, tail risk, limitations and production gates without overclaiming." }
+      { title: "Model judgment", text: "Target design, score construction, ranking, calibration and policy use are assessed separately." },
+      { title: "Business trade-offs", text: "PD distributions are translated into approval, bad-capture and expected-loss trade-offs." },
+      { title: "Governance discipline", text: "Exclusions, challengers, tail risk, limitations and production gates are documented without overclaiming." }
     ],
     artifacts: [
       { label: "Credit Risk Decision Engine README", type: "MD", href: "evidence/project-3/README.md", detail: "Full methodology, results and positioning" },
